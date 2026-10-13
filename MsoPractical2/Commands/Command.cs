@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MsoPractical2
+namespace MsoPractical2.Commands
 {
     internal class Command
     {
