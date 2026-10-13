@@ -1,0 +1,15 @@
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\bin\Debug\net10.0\MsoPractical2.exe
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\bin\Debug\net10.0\MsoPractical2.deps.json
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\bin\Debug\net10.0\MsoPractical2.runtimeconfig.json
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\bin\Debug\net10.0\MsoPractical2.dll
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\bin\Debug\net10.0\MsoPractical2.pdb
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.AssemblyInfoInputs.cache
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.AssemblyInfo.cs
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.csproj.CoreCompileInputs.cache
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.dll
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\refint\MsoPractical2.dll
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.pdb
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPractical2.genruntimeconfig.cache
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\ref\MsoPractical2.dll
+C:\Users\hidde\source\repos\MsoPractical2\MsoPractical2\obj\Debug\net10.0\MsoPract.A30813EB.Up2Date
