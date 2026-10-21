@@ -1,0 +1,30 @@
+Turn left
+Turn left
+Move 2
+Repeat 4 times
+	Move 2
+	Turn left
+	Repeat 5 times
+		Move 2
+		Turn right
+	Turn left
+Turn right
+Move 1
+Repeat 2 times
+	Turn left
+Move 3
+Repeat 2 times
+	Turn right
+	Move 6
+	Repeat 9 times
+		Move 2
+		Turn left
+		Repeat 3 times
+			Move 1
+			Turn right
+	Move 1
+	Repeat 3 times
+		Turn right
+		Move 1
+		Turn left
+Move 3

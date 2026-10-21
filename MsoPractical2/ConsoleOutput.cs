@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+namespace MsoPractical2;
 
-namespace MsoPractical2
+public class ConsoleOutput : Output
 {
-    internal class ConsoleOutput
-    {
+    // Writes one message to the console
+    public override void Display(string message) {
+        Console.WriteLine(message);
     }
 }
