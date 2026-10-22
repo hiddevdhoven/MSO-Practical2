@@ -7,7 +7,12 @@ public class Grid
     private readonly Dictionary<int, Position> charPositions = new();
 
     // Saves or updates a character's position
-    public void UpdatePosition(int characterId, Position position) =>
+    public void UpdatePosition(int characterId, Position position) {
         charPositions[characterId] = position;
+    }
 
+    // Get an entity's position by Id
+    public Position GetPosition(int characterId) {
+        return charPositions[characterId];
+    }
 }

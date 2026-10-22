@@ -20,7 +20,9 @@ public class Main
     // Logic loop, runs until the user exits the application
     public void Run() {
         while (true) {
-            output.Display("Available programs: " + String.Join(", ", savedPrograms.Keys) + "\n");
+            var sortedKeys = savedPrograms.Keys.ToArray();
+            Array.Sort(sortedKeys);
+            output.Display("Available programs: " + String.Join(", ", sortedKeys) + "\n");
             var (action, target) = input.ReadCommand();
 
             switch (action) {
@@ -55,6 +57,7 @@ public class Main
         output.Display($"Running {programName}...");
         execution.Execute();
         output.Display(String.Join(", ", execution.ActionLog) + ".");
+        output.Display(execution.GetEndState());
     }
 
     // Shows metrics about a program
@@ -92,6 +95,8 @@ public class Main
                 programImporter.ImportProgram(filePath, true);
             } catch (FileNotFoundException ex) {
                 output.Display($"Default Program file not found: {ex.Message}");
+            } catch (Exception ex) {
+                output.Display($"Error importing default Program file: {ex.Message}");
             }
         }
     }

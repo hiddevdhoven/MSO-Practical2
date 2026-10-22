@@ -1,6 +1,6 @@
 namespace MsoPractical2;
 
-public class MovableCharacter(int id) : Character(id)
+public class MovableCharacter(int id, Coordinate location = default, Direction facing = Direction.East) : Character(id, location, facing)
 {
     // record total steps moved since creation
     public int StepsMoved { get; private set; }

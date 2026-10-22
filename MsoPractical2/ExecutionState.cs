@@ -13,7 +13,7 @@ public class ExecutionState
     // For now, all programs are executed with one movable character
     public ExecutionState(Program program) {
         this.program = program ?? throw new ArgumentNullException(nameof(program));
-        characters = new List<Character> { new MovableCharacter(1) };
+        characters = new List<Character> { new MovableCharacter(0) };
         grid = new Grid();
         foreach (var character in characters) {
             grid.UpdatePosition(character.Id, new Position(character.Location, character.Facing));
@@ -33,6 +33,15 @@ public class ExecutionState
             foreach (var command in program.Instructions)
                 ExecuteCommand(command, character);
         }
+    }
+
+    // Map all Characters to an end state string and join with newlines
+    public string GetEndState() {
+        return String.Join("\n", characters.Select(c => {
+            string location = $"({c.Location.X}, {c.Location.Y})";
+            string facing = c.Facing.ToString().ToLower();
+            return $"End state {location} facing {facing}.";
+        }));
     }
 
     // Executes one command, handle repeats recursively, and save the position after
