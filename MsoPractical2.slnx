@@ -2,5 +2,6 @@
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
   </Folder>
+  <Project Path="MsoPractical2.Tests/MsoPractical2.Tests.csproj" Id="c07e9ad3-6561-4c4a-8a94-cb13a528e712" />
   <Project Path="MsoPractical2/MsoPractical2.csproj" />
 </Solution>
