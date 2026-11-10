@@ -4,12 +4,12 @@ using System.Text;
 
 namespace MsoPractical2
 {
-    public class Excersize
+    public class Level
     {
         public string name;
         public Grid grid;
         
-        public Excersize(string _name, Grid _grid) 
+        public Level(string _name, Grid _grid) 
         {
             this.name = _name;
             this.grid = _grid;

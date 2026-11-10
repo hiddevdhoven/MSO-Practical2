@@ -36,7 +36,7 @@
         </Grid>
         <!-- grid/programbuilder -->
         <Grid Grid.Row="2" ColumnDefinitions="Auto, *, Auto">
-
+            <Canvas x:Name="GridCanvas" HorizontalAlignment="Left" VerticalAlignment="Top" />
         </Grid>
         <!-- console -->
         <Grid Grid.Row="3" Height="80">

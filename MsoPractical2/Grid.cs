@@ -19,9 +19,10 @@ public class Grid
     }
 }
 
-public enum Celltype {
+public enum Celltype
+{
     Start,
-    Open,
+    free,
     Blocked,
-    End
+    Finish
 }
