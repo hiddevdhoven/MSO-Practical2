@@ -1,20 +1,23 @@
 namespace MsoPractical2;
 
-public class Main
-{
+public class Main {
     // Stores all programs loaded by the application
     private readonly Dictionary<string, Program> savedPrograms = new();
+    private readonly Dictionary<string, Level> savedLevels = new();
     private readonly Output output;
     private readonly Input input;
     // Imports programs from .txt files
     private readonly ProgramImporter programImporter;
+    private readonly LevelImporter levelImporter;
 
     // Create the application and load predefined programs
     public Main() {
         output = new ConsoleOutput();
         input = new Input();
         programImporter = new ProgramImporter(savedPrograms);
+        levelImporter = new LevelImporter(savedLevels);
         CreatePredefinedPrograms();
+        CreatePredefinedLevels();
     }
 
     // Logic loop, runs until the user exits the application
@@ -97,6 +100,18 @@ public class Main
                 output.Display($"Default Program file not found: {ex.Message}");
             } catch (Exception ex) {
                 output.Display($"Error importing default Program file: {ex.Message}");
+            }
+        }
+    }
+    private void CreatePredefinedLevels() {
+        string folder = Path.Combine(AppContext.BaseDirectory, "PreDefinedLevels");
+        foreach (string filePath in Directory.GetFiles(folder, "*.txt")) {
+            try {
+                levelImporter.ImportLevel(filePath, true);
+            } catch (FileNotFoundException ex) {
+                output.Display($"Default Level file not found: {ex.Message}");
+            } catch (Exception ex) {
+                output.Display($"Error importing default Level file: {ex.Message}");
             }
         }
     }

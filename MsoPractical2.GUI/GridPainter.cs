@@ -20,19 +20,18 @@ namespace MsoPractical2.GUI
             cellSize = _cellSize;
         }
 
-        public void Paint(Canvas canvas) {
-            int tempGridWidth = 10;
-            int tempGridHeight = 10;
-            canvas.Children.Clear();
-            canvas.Width =  tempGridWidth * cellSize;
-            canvas.Height = tempGridHeight * cellSize;
+        public void Paint(Canvas canvas, Level level) {
 
-            for (int y = 0; y < tempGridHeight; y++) {
-                for (int x = 0; x < tempGridWidth; x++) {
+            canvas.Children.Clear();
+            canvas.Width =  level.width * cellSize;
+            canvas.Height = level.height * cellSize;
+
+            for (int y = 0; y < level.height; y++) {
+                for (int x = 0; x < level.width; x++) {
                     var cell = new Rectangle {
                         Width = cellSize,
                         Height = cellSize,
-                        Fill = FreeBrush,
+                        Fill = GetBrush(level.cells[x, y]),
                         Stroke = LineBrush,
                         StrokeThickness = 1
                     };
@@ -43,13 +42,13 @@ namespace MsoPractical2.GUI
                 }
             }
         }
-        /*
-        private static IBrush GetBrush(LevelGrid grid, int x, int y) {
 
-            if (level.grid(x, y) == Blocked) return BlockedBrush;
-            if (level.grid(x, y) == End)  return FinishBrush;
-            return FreeBrush;
-        }
-        */
+        private static IBrush GetBrush(CellType type) => type switch {
+            CellType.Blocked => Brushes.DimGray,
+            CellType.Start => Brushes.LightBlue,
+            CellType.Finish => Brushes.LightGreen,
+            _ => Brushes.White
+        };
+
     }
 }

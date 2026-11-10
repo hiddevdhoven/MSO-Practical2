@@ -1,7 +1,8 @@
 using Avalonia.Controls;
 using Avalonia.Interactivity;
-using System.Diagnostics;
 using MsoPractical2;
+using System;
+using System.Diagnostics;
 
 namespace MsoPractical2.GUI;
 
@@ -11,8 +12,7 @@ public partial class MainWindow : Window
 
     public MainWindow() {
         InitializeComponent();
-
-        painter.Paint(GridCanvas);
+        painter.Paint(GridCanvas, level);
     }
 
     private void Button_OnClick(object? sender, RoutedEventArgs e) {
