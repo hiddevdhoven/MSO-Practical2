@@ -7,12 +7,19 @@ namespace MsoPractical2
     public class Level
     {
         public string name;
-        public Grid grid;
-        
-        public Level(string _name, Grid _grid) 
+        public CellType[,] cells;
+
+        public Level(string _name, CellType[,] cells)
         {
             this.name = _name;
-            this.grid = _grid;
+            this.cells = cells;
         }
+    }
+    public enum CellType
+    {
+        Start,
+        Free,
+        Blocked,
+        Finish
     }
 }
