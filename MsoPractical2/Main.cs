@@ -2,8 +2,8 @@ namespace MsoPractical2;
 
 public class Main {
     // Stores all programs loaded by the application
-    private readonly Dictionary<string, Program> savedPrograms = new();
-    private readonly Dictionary<string, Level> savedLevels = new();
+    public readonly Dictionary<string, Program> savedPrograms = new();
+    public readonly Dictionary<string, Level> savedLevels = new();
     private readonly Output output;
     private readonly Input input;
     // Imports programs from .txt files

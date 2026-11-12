@@ -20,5 +20,11 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MsoPractical2\MsoPractical2.csproj" />
+	  <Content Include="..\MsoPractical2\PreDefinedLevels\**\*.txt"
+           Link="PreDefinedLevels\%(RecursiveDir)%(Filename)%(Extension)"
+           CopyToOutputDirectory="PreserveNewest" />
+	  <Content Include="..\MsoPractical2\PreDefinedPrograms\**\*.txt"
+			   Link="PreDefinedPrograms\%(RecursiveDir)%(Filename)%(Extension)"
+			   CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
 </Project>

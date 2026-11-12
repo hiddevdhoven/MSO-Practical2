@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="PreDefinedPrograms\*.txt">
+	  <None Update="PreDefinedLevels\**\*.txt" CopyToOutputDirectory="PreserveNewest" />
+	  <None Update="PreDefinedPrograms\*.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
